@@ -28,7 +28,7 @@
   "submit": {
     "production": {
       "ios": {
-        "ascAppId": "TBD",
+        "ascAppId": "6808848925",
         "ascApiKeyPath": "/Users/raymondzhao/workspace/landed/.credentials/AuthKey_638BMBPA45.p8",
         "ascApiKeyId": "638BMBPA45",
         "ascApiKeyIssuerId": "f6b1c22d-c20b-471b-9c5d-fb9619390dc8"
