@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Stride",
+    "slug": "stride",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "stride",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0F1A17",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.formaz.stride",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSMotionUsageDescription": "Stride reads your step count from the motion sensor so it can count your walks. Steps stay on your phone.",
+        "NSUserNotificationsUsageDescription": "Stride sends one optional, quiet reminder a day at the time you choose.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.formaz.stride",
+      "adaptiveIcon": {
+        "backgroundColor": "#0F1A17",
+        "foregroundImage": "./assets/adaptive-icon.png"
+      }
+    },
+    "plugins": [
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Stride reads your step count from the motion sensor so it can count your walks. Steps stay on your phone."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#9BE8B6"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0F1A17"
+        }
+      ]
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "owner": "raymondzhao3000"
+  }
+}
