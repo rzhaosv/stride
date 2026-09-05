@@ -21,7 +21,7 @@
         "credentialsSource": "local"
       },
       "env": {
-        "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "TBD"
+        "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "appl_iIwjfbzQvFRIbSMqGNGiIwYxHOB"
       }
     }
   },
