@@ -1,7 +1,7 @@
 """Set Stride App Store metadata + screenshots via ASC API. Idempotent. Run from landed/.credentials with PYTHONPATH=."""
 import asc, json, os, glob, time
 APP='6808848925'
-SUBS=tuple(x for x in open('/Users/raymondzhao/workspace/stride_subs.log').read().split() if x.isdigit() and len(x)==10)
+SUBS=('6808848932','6808849629')
 SHOTS=sorted(glob.glob('/Users/raymondzhao/workspace/stride/store/screenshots/0*.png'))
 DESC="""A step counter that never talks about your weight. Stride counts your steps, gives you one gentle goal, and shows you a trail of small days that add up. No calories, no leaderboard, no shame.
 

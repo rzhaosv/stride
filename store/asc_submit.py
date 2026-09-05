@@ -1,7 +1,7 @@
 """Attach newest processed build to Lantern 1.0, create a review submission with version + subs + group version, submit.
 Run: cd landed/.credentials && PYTHONPATH=. python3 ~/workspace/wisp/store/asc_submit.py [--dry-run]"""
 import asc, json, sys, time
-APP='6808837553'; GROUP='22360183'; SUBS=['6808838512','6808841356']; DRY='--dry-run' in sys.argv
+APP='6808848925'; GROUP='22360379'; SUBS=['6808848932','6808849629']; DRY='--dry-run' in sys.argv
 def err(r): return [ (e.get('code'), e.get('detail')) for e in r.get('body',{}).get('errors',[])] or r
 v=asc.api('GET',f'/v1/apps/{APP}/appStoreVersions?filter[platform]=IOS&limit=1&fields[appStoreVersions]=versionString,appStoreState')['data'][0]; VID=v['id']
 print('version', v['attributes'])
