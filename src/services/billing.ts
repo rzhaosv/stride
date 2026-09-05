@@ -4,6 +4,7 @@ import Purchases, {
   LOG_LEVEL,
 } from 'react-native-purchases';
 import { Platform } from 'react-native';
+import { demo } from '../dev/demo';
 
 const RC_IOS_KEY = process.env.EXPO_PUBLIC_REVENUECAT_IOS_KEY ?? '';
 export const ENTITLEMENT = 'pro';
@@ -41,7 +42,14 @@ export function addPremiumListener(cb: (isPro: boolean) => void): () => void {
   return () => Purchases.removeCustomerInfoUpdateListener(listener);
 }
 
+/** Web-only canned plans so the `?demo=paywall` screenshot shows real prices. Never used on native. */
+const DEMO_PACKAGES = [
+  { identifier: '$rc_annual', product: { priceString: '$39.99/yr' } },
+  { identifier: '$rc_monthly', product: { priceString: '$9.99/mo' } },
+] as unknown as PurchasesPackage[];
+
 export async function getPackages(): Promise<PurchasesPackage[]> {
+  if (demo) return DEMO_PACKAGES;
   if (!configured) return [];
   try {
     const offerings = await Purchases.getOfferings();
